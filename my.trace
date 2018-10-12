@@ -1,6 +1,0 @@
-Leaks program:
-Process 84343: 159 nodes malloced for 13 KB
-Process 84343: 0 leaks for 0 total leaked bytes.
-Leaks visualization:
-Process 84336: 170 nodes malloced for 118 KB
-Process 84336: 0 leaks for 0 total leaked bytes.
