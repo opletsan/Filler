@@ -109,7 +109,7 @@ int					get_map(t_var *s)
 			ft_dprintf(s->fd, "Error: no line in the map !\n");
 			return (0);
 		}
-		if (!*line)
+		if (!ft_strchr(line, ' '))
 		{
 			free(line);
 			ft_dprintf(s->fd, "Error: empty line in the map !\n");
