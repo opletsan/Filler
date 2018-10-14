@@ -88,6 +88,7 @@ SRC 		=	ft_itoa.c \
 				ft_itoa_base.c \
 				ft_powerf.c \
 				ft_sqrtf.c \
+				ft_puthex.c \
 				get_next_line.c
 
 OBJ			=	$(addprefix $(OBJ_DIR), $(SRC:.c=.o))

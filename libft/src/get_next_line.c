@@ -51,10 +51,8 @@ static inline int	read_line(t_gnl *f, const int fd, char *buf)
 		tmp = f->buf;
 		if (!(f->buf = ft_strjoin(tmp, buf)))
 		{
-			if (tmp)
-				ft_strdel(&tmp);
-			if (buf)
-				ft_strdel(&buf);
+			ft_strdel(&tmp);
+			ft_strdel(&buf);
 			return (-1);
 		}
 		ft_strdel(&tmp);
@@ -105,14 +103,12 @@ int					get_next_line(const int fd, char **line)
 		lst = crt_lst(fd);
 	if (!(f = src_lst(fd, lst)) || read_line(f, fd, buf) < 0)
 	{
-		if (f->buf)
-			ft_strdel(&f->buf);
+		ft_strdel(&f->buf);
 		return (-1);
 	}
 	if (!*f->buf)
 	{
-		if (f->buf)
-			ft_strdel(&f->buf);
+		ft_strdel(&f->buf);
 		return (0);
 	}
 	return (contin(line, f));

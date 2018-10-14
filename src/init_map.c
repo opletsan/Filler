@@ -128,7 +128,7 @@ int					create_map(t_var *s, char *line, char *tmp)
 	static int	i = -1;
 	t_pos		mps;
 
-	if (get_next_line(0, &line) <= 0)
+	if (get_next_line(0, &line) < 0)
 	{
 		ft_dprintf(s->fd, "Error: empty line in the beginning of the map !\n");
 		return (0);
